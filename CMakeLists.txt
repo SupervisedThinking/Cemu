@@ -86,7 +86,6 @@ find_package(ZLIB REQUIRED)
 find_package(zstd MODULE REQUIRED) # MODULE so that zstd::zstd is available
 find_package(OpenSSL COMPONENTS Crypto SSL REQUIRED)
 find_package(glm REQUIRED)
-find_package(fmt 7.0.0 REQUIRED)
 find_package(PNG REQUIRED)
 
 # glslang versions older than 11.11.0 define targets without a namespace
@@ -136,5 +135,7 @@ find_package(ZArchive)
 if (NOT ZArchive_FOUND)
 	add_subdirectory("dependencies/ZArchive")
 endif()
+
+add_subdirectory("dependencies/fmt")
 
 add_subdirectory(src)

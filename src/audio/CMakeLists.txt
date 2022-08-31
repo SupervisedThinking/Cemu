@@ -36,7 +36,7 @@ target_precompile_headers(CemuAudio PRIVATE ../Common/precompiled.h)
 
 target_include_directories(CemuAudio PUBLIC "../")
 
-target_link_libraries(CemuAudio PRIVATE CemuCafe CemuConfig CemuGui CemuUtil)
+target_link_libraries(CemuAudio PRIVATE fmt::fmt CemuCafe CemuConfig CemuGui CemuUtil)
 
 if(ENABLE_CUBEB)
 	# PUBLIC because cubeb.h/cubeb.h is included in CubebAPI.h
